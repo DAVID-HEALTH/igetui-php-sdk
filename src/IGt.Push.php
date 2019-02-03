@@ -60,13 +60,13 @@ class IGetui
     private function initOSDomain($hosts)
     {
         if ($hosts == null || count($hosts) == 0) {
-            $hosts = isset(IGeTui::$appkeyUrlList[$this->appkey]) ? IGeTui::$appkeyUrlList[$this->appkey] : null;
+            $hosts = isset(IGetui::$appkeyUrlList[$this->appkey]) ? IGetui::$appkeyUrlList[$this->appkey] : null;
             if ($hosts == null || count($hosts) == 0) {
                 $hosts = $this->getOSPushDomainUrlList($this->domainUrlList, $this->appkey);
-                IGeTui::$appkeyUrlList[$this->appkey] = $hosts;
+                IGetui::$appkeyUrlList[$this->appkey] = $hosts;
             }
         } else {
-            IGeTui::$appkeyUrlList[$this->appkey] = $hosts;
+            IGetui::$appkeyUrlList[$this->appkey] = $hosts;
         }
         $this->host = ApiUrlRespectUtils::getFastest($this->appkey, $hosts);
         return $this->host;

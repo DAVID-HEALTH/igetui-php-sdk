@@ -52,14 +52,14 @@ pushMessageToApp();
 // getPushMessageResultDemo();
 function getPersonaTagsDemo()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $ret = $igt->getPersonaTags(APPID);
     var_dump($ret);
 }
 
 function getUserCountByTagsDemo()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $tagList = array(
         "金在中",
         "龙卷风"
@@ -72,7 +72,7 @@ function getPushMessageResultDemo()
 {
 
     // putenv("gexin_default_domainurl=http://183.129.161.174:8006/apiex.htm");
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
 
     $ret = $igt->getPushResult("OSA-0522_QZ7nHpBlxF6vrxGaLb1FA3");
     var_dump($ret);
@@ -87,7 +87,7 @@ function getPushMessageResultDemo()
 // 用户状态查询
 function getUserStatus()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->getClientIdStatus(APPID, CID);
     var_dump($rep);
     echo ("<br><br>");
@@ -96,14 +96,14 @@ function getUserStatus()
 // 推送任务停止
 function stoptask()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $igt->stop("OSA-1127_QYZyBzTPWz5ioFAixENzs3");
 }
 
 // 通过服务端设置ClientId的标签
 function setTag()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $tagList = array(
         '',
         '中文',
@@ -116,7 +116,7 @@ function setTag()
 
 function getUserTags()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->getUserTags(APPID, CID);
     // $rep.connect();
     var_dump($rep);
@@ -133,8 +133,8 @@ function getUserTags()
 // 单推接口案例
 function pushMessageToSingle()
 {
-    // $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-    $igt = new IGeTui(null, APPKEY, MASTERSECRET, false);
+    // $igt = new IGetui(HOST,APPKEY,MASTERSECRET);
+    $igt = new IGetui(null, APPKEY, MASTERSECRET, false);
 
     // 消息模版：
     // 1.TransmissionTemplate:透传功能模板
@@ -176,7 +176,7 @@ function pushMessageToSingleBatch()
 {
     putenv("gexin_pushSingleBatch_needAsync=false");
 
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $batch = new IGtBatch(APPKEY, $igt);
     $batch->setApiUrl(HOST);
     // $igt->connect();
@@ -232,7 +232,7 @@ function pushMessageToList()
     putenv("gexin_pushList_needDetails=true");
     putenv("gexin_pushList_needAsync=true");
 
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     // 消息模版：
     // 1.TransmissionTemplate:透传功能模板
     // 2.LinkTemplate:通知打开链接功能模板
@@ -270,7 +270,7 @@ function pushMessageToList()
 // 群推接口案例
 function pushMessageToApp()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $template = IGtTransmissionTemplateDemo();
     // $template = IGtLinkTemplateDemo();
     // 个推信息体
