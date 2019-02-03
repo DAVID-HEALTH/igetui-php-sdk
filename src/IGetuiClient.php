@@ -11,7 +11,7 @@ use IGetui\igetui\template\IGtTransmissionTemplate;
 use IGetui\igetui\IGtAPNPayload;
 use IGetui\igetui\DictionaryAlertMsg;
 
-class IGeTui
+class IGetuiClient
 {
 
     private $host;
@@ -37,7 +37,7 @@ class IGeTui
         $this->masterSecret = $masterSecret;
         $this->cid = '';
         $this->deviceToken = '';
-        $this->igt = new IGeTui($this->host, $this->appKey, $this->masterSecret);
+        $this->igt = new IGetui($this->host, $this->appKey, $this->masterSecret);
     }
 
     public function pushToUser($uid)
