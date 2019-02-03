@@ -38,7 +38,7 @@ pushMessageToList();
 // aliasUnBindAll(); //解除所有ClientId别名绑定
 function aliasBind()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->bindAlias(APPID, ALIAS, CID);
     var_dump($rep);
     echo ("<br><br>");
@@ -46,7 +46,7 @@ function aliasBind()
 
 function aliasBatch()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
 
     $target = new IGtTarget();
     $target->set_clientId(CID);
@@ -65,7 +65,7 @@ function aliasBatch()
 
 function queryCID()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->queryClientId(APPID, ALIAS);
     var_dump($rep);
     echo ("<br><br>");
@@ -73,7 +73,7 @@ function queryCID()
 
 function queryAlias()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->queryAlias(APPID, CID);
     var_dump($rep);
     echo ("<br><br>");
@@ -81,7 +81,7 @@ function queryAlias()
 
 function aliasUnBind()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->unBindAlias(APPID, ALIAS, CID);
     var_dump($rep);
     echo ("<br><br>");
@@ -89,7 +89,7 @@ function aliasUnBind()
 
 function aliasUnBindAll()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     $rep = $igt->unBindAliasAll(APPID, ALIAS, CID);
     var_dump($rep);
     echo ("<br><br>");
@@ -105,7 +105,7 @@ function aliasUnBindAll()
 // 单推接口案例
 function pushMessageToSingle()
 {
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
 
     // 消息模版：
     // 1.TransmissionTemplate:透传功能模板
@@ -141,7 +141,7 @@ function pushMessageToSingle()
 function pushMessageToList()
 {
     putenv("needDetails=true");
-    $igt = new IGeTui(HOST, APPKEY, MASTERSECRET);
+    $igt = new IGetui(HOST, APPKEY, MASTERSECRET);
     // 消息模版：
     // 1.TransmissionTemplate:透传功能模板
     // 2.LinkTemplate:通知打开链接功能模板
