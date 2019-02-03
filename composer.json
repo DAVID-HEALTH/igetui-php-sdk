@@ -1,0 +1,26 @@
+{
+  "name": "DAVID-HEALTH/igetui-php-sdk",
+  "type": "library",
+  "description": "个推PHP sdk",
+  "keywords": [
+    "getui",
+    "push"
+  ],
+  "homepage": "https://github.com/DAVID-HEALTH/igetui-php-sdk.git",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "DAVID-HEALTH",
+      "email": "developer@david-health.cn",
+      "homepage": "https://github.com/DAVID-HEALTH"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "IGetui\\": "src/"
+    }
+  }
+}
