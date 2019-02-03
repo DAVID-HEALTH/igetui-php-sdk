@@ -13,7 +13,7 @@ use IGetui\igetui\utils\LangUtils;
 use IGetui\igetui\IGtTagMessage;
 header("Content-Type: text/html; charset=utf-8");
 
-class IGeTui
+class IGetui
 {
 
     var $appkey;
